@@ -20,6 +20,11 @@ class TestDB(unittest.TestCase):
     def test_VerificaListaCanciones(self):
         self.assertEqual(self.object.VerificaListaCanciones(["Canción 1", "Canción 2", "Canción 3"]), True)
         self.assertEqual(self.object.VerificaListaCanciones(["Canción 1", "Canción 2", None]), False)
+
+    def test_Encuentra(self):
+        #Test of Encuentra method
+        for i in range(51):
+            self.assertEqual(self.object.Encuentra([0, 1, 2, 3, i], i), True)
     
 
 if __name__ == "__main__":
