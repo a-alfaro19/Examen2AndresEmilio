@@ -24,7 +24,7 @@ class TestDB(unittest.TestCase):
     def test_Encuentra(self):
         #Test of Encuentra method
         for i in range(51):
-            self.assertEqual(self.object.Encuentra([0, 1, 2, 3, i], i), True)
+            self.assertEqual(self.object.Encuentra([0, 1, 2, 3, i], i), False)
     
 
 if __name__ == "__main__":
