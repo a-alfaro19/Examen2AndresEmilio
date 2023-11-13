@@ -24,7 +24,7 @@ class MiClase:
     def VerificaListaCanciones(self, lista):
         if any(song is None for song in lista):
             return False
-        return False
+        return True
     
     def Encuentra(self, lista, elemento):
         for item in lista:
