@@ -12,6 +12,14 @@ class TestDB(unittest.TestCase):
     def test_DivisibleTempo(self):
         self.assertEqual(self.object.DivisibleTempo(10), [1, 2, 5, 10])
         self.assertEqual(self.object.DivisibleTempo(11), [1, 11])
+
+    def test_ObtieneMasBailable(self):
+        self.assertEqual(self.object.ObtieneMasBailable([0.8, 0.9, 0.7]), 0.9)
+        self.assertEqual(self.object.ObtieneMasBailable([0.75, 0.1, 0.99]), 0.99)
+
+    def test_VerificaListaCanciones(self):
+        self.assertEqual(self.object.VerificaListaCanciones(["Canción 1", "Canción 2", "Canción 3"]), True)
+        self.assertEqual(self.object.VerificaListaCanciones(["Canción 1", "Canción 2", None]), False)
     
 
 if __name__ == "__main__":
